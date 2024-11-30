@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>  Вот список всех заявок: </h2>
+
+<ul>
+
+    {% for request in list%}
+
+    <li> <a href = #> {{ request }} ( {{request.submitted_at}} )</a></li>
+
+    {% endfor %}
+
+
+
+</ul>
+
+
+
+{% endblock content %}

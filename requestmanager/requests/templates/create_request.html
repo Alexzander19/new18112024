@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2> для обработки формы заявок</h2>
+
+<form action = "{% url 'create_request' %}" method = 'post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name = 'submit'> Добавить запрос </button>
+</form>
+
+{% endblock content %}
