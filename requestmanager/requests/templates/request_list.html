@@ -8,8 +8,8 @@
 
     {% for request in list%}
 
-    <li> <a href = #> {{ request }} ( {{request.submitted_at}} )</a></li>
-
+    <li> <a href = " {% url 'one_request' request.id %}"> {{ request }} ( {{request.submitted_at}} )</a></li>
+   
     {% endfor %}
 
 

@@ -1,5 +1,7 @@
 from django.db import models
 
+from .validators import isalphavalidator
+
 # Create your models here.
 # Создайте модель заявки
 # В файле requests/models.py создайте модель Request с полями:
@@ -11,7 +13,7 @@ from django.db import models
 
 
 class Request(models.Model):
-    name = models.CharField(max_length = 100)
+    name = models.CharField(max_length = 100,validators=[isalphavalidator])
     email = models.EmailField(max_length = 100, unique=True)
     message = models.TextField()
     submitted_at = models.DateTimeField(auto_now_add=True)

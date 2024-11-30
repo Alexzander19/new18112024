@@ -31,3 +31,11 @@ def request_list(request):
     context = {'list': request_list}
     return render(request,"request_list.html",context)
 
+def one_request(request, request_id):
+    # response = "Вы смотрите каждый блог по отдельности %s."
+    one_request = Request.objects.get(id = request_id)
+    context = {"one_request": one_request}
+   
+    # return HttpResponse(response % blog_id)
+    return render(request, "one_request.html", context)   
+

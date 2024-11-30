@@ -5,10 +5,12 @@ from . import views
 
 
 urlpatterns = [
-    path("", views.index, name = "index"),
+    path("jastindex/", views.index, name = "index"),
 
-    path("request/",views.create_request, name = 'create_request'),
+    path("",views.create_request, name = 'create_request'),
 
-    path("list/", views.request_list, name = "request_list.html")
+    path("list/", views.request_list, name = "request_list.html"),
+
+    path("list/one_request/<int:request_id>" ,views.one_request, name = "one_request")
    
 ]

@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+
+{% block content %}
+
+<h2>  ОДИН ЗАПРОС: </h2>
+
+
+
+   <h3> Автор запроса:  {{ one_request.name }} </h3>
+   <h3> Текст запроса:  {{ one_request.message }}</h3> 
+   <h4> Дата и время создания: {{ one_request.submitted_at}}</h4> 
+    
+   
+{% endblock content %}
